@@ -1,6 +1,6 @@
 module github.com/jeroenrinzema/openapi
 
-go 1.23.4
+go 1.22
 
 require (
 	github.com/google/gnostic v0.7.0
