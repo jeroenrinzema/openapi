@@ -408,10 +408,6 @@ message Object {
   repeated NamedAny additional_properties = 1;
 }
 
-message Service {
-  string label = 1;
-}
-
 // Describes a single API operation on a path.
 message Operation {
   repeated string tags = 1;

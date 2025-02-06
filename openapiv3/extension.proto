@@ -16,7 +16,6 @@ syntax = "proto3";
 
 package openapi.v3;
 
-import "openapiv3/OpenAPIv3.proto";
 import "google/protobuf/descriptor.proto";
 
 // This option lets the proto compiler generate Java code inside the package
@@ -43,18 +42,10 @@ option objc_class_prefix = "OAS";
 // The Go package name.
 option go_package = "github.com/google/gnostic/openapiv3;openapi_v3";
 
-extend google.protobuf.FileOptions {
-  Document document = 1143;
+extend google.protobuf.ServiceOptions {
+  Service service = 1143;
 }
 
-extend google.protobuf.MethodOptions {
-  Operation operation = 1143;
-}
-
-extend google.protobuf.MessageOptions {
-  Schema schema = 1143;
-}
-
-extend google.protobuf.FieldOptions {
-  Schema property = 1143;
+message Service {
+  string label = 1;
 }
