@@ -42,7 +42,7 @@ option java_package = "org.openapi_v3";
 option objc_class_prefix = "OAS";
 
 // The Go package name.
-option go_package = "github.com/google/gnostic/openapiv3;openapi_v3";
+option go_package = "openapiv3;openapi_v3";
 
 message AdditionalPropertiesItem {
   oneof oneof {
@@ -406,6 +406,10 @@ message OauthFlows {
 
 message Object {
   repeated NamedAny additional_properties = 1;
+}
+
+message Service {
+  string label = 1;
 }
 
 // Describes a single API operation on a path.
